@@ -19,7 +19,7 @@ public class prova : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F)|| porta.transform.transform.eulerAngles.y > 90f)
+        if (Input.GetKeyDown(KeyCode.F)|| (porta.transform.transform.eulerAngles.y < 90 && porta.transform.transform.eulerAngles.y > 80))
         {
            
             open_Door = true;
