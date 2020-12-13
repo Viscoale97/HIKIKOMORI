@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\Hand.cs" />
     <Compile Include="Assets\Scripts\HandPresence.cs" />
     <Compile Include="Assets\Scripts\HingeJointListener.cs" />
+    <Compile Include="Assets\Scripts\In_Room.cs" />
     <Compile Include="Assets\Scripts\Joystick.cs" />
     <Compile Include="Assets\Scripts\LevelChange.cs" />
     <Compile Include="Assets\Scripts\MDOOR.cs" />

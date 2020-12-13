@@ -261,7 +261,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 12.8
+  - time: 14.716666
     functionName: PlaySoundVoiceStanza
     data: 
     objectReferenceParameter: {fileID: 0}
