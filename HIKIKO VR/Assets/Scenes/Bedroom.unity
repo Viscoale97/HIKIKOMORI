@@ -550,7 +550,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &238099944
 Transform:
   m_ObjectHideFlags: 0
@@ -1141,7 +1141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &481388469
 Transform:
   m_ObjectHideFlags: 0
@@ -1971,7 +1971,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1073402332
 Transform:
   m_ObjectHideFlags: 0
@@ -2844,7 +2844,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1389635663
 Transform:
   m_ObjectHideFlags: 0
@@ -3279,11 +3279,11 @@ GameObject:
   - component: {fileID: 1557638161}
   - component: {fileID: 1557638160}
   - component: {fileID: 1557638159}
+  - component: {fileID: 1557638165}
   - component: {fileID: 1557638158}
   - component: {fileID: 1557638157}
   - component: {fileID: 1557638164}
   - component: {fileID: 1557638166}
-  - component: {fileID: 1557638165}
   m_Layer: 8
   m_Name: Palla
   m_TagString: Untagged
@@ -3745,7 +3745,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1613444884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3847,7 +3847,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1613444883}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.6, z: 45.7}
+  m_LocalPosition: {x: 0, y: 2.6, z: 86.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7072648536672564376}
@@ -14932,7 +14932,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40f0ab846a3e00d42a402bd8e99d669a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asteroidPrefab: {fileID: 2867048167863893118, guid: 43b4fe866ab664f4287eb08796a3183a,
+  asteroidPrefab: {fileID: 1972726664408743884, guid: 13fde7e704904ca42bb9328ceeab17b3,
     type: 3}
   RespawnTime: 1
   active: 0
