@@ -6,14 +6,14 @@ public class prova : MonoBehaviour
 {
     public Animator anim;
     public GameObject porta;
-    public GameObject image;
-    private Animator Anim_Image;
+    public Animator anim_Go;
+
     public bool open_Door = false;
     // Start is called before the first frame update
     void Start()
     {
         FindObjectOfType<AudioManager>().Play("Appare_porta");
-        Anim_Image = image.GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
@@ -21,9 +21,20 @@ public class prova : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F)|| porta.transform.transform.eulerAngles.y > 90f)
         {
-            Anim_Image.SetTrigger("Active");
+           
             open_Door = true;
-            anim.SetTrigger("End");
+            
+            anim.SetTrigger("Active");
         }
+    }
+    public void ActiveGo()
+    {
+        anim_Go.SetTrigger("Go");
+        //activeLight = 1;
+    }
+    public void ActiveLightInRoom()
+    {
+        anim.SetTrigger("ActiveInRoom");
+        //activeLight = 2;
     }
 }

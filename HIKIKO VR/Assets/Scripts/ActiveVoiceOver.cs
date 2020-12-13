@@ -5,14 +5,16 @@ using UnityEngine;
 public class ActiveVoiceOver : MonoBehaviour
 {
     // Start is called before the first frame update
-    
+
+    public GameObject image;
+    private Animator Anim_Image;
     private int activeLight = 0;
     public Light light1;
     public Light light2;
 
     void Start()
     {
-       
+        Anim_Image = image.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -39,14 +41,10 @@ public class ActiveVoiceOver : MonoBehaviour
     {
         FindObjectOfType<AudioManager>().Play("Stanza");
     }
-    public void ActiveLight()
-    {
-        
-        //activeLight = 1;
-    }
+
     public void ActiveLightInRoom()
     {
-       
+        Anim_Image.SetTrigger("ActiveInRoom");
         //activeLight = 2;
     }
 }

@@ -181,6 +181,7 @@ GameObject:
   - component: {fileID: 95290648}
   - component: {fileID: 95290647}
   - component: {fileID: 95290646}
+  - component: {fileID: 95290649}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -263,6 +264,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 95290644}
   m_CullTransparentMesh: 0
+--- !u!114 &95290649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95290644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dedc0146c701f9e4db91066fdfe2ed8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 95290646}
+  porta: {fileID: 9199680023827539698}
+  anim_Go: {fileID: 182815681}
+  open_Door: 0
 --- !u!1 &126519973 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7217828390678641911, guid: 950dad5a9319eb94482ced8962b88fe3,
@@ -419,6 +436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4401f1c315457234abd60527458597c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 95290644}
   light1: {fileID: 1403279355}
   light2: {fileID: 1642367984}
 --- !u!1 &236457842
@@ -1615,7 +1633,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   porta: {fileID: 0}
-  image: {fileID: 0}
+  anim_Go: {fileID: 0}
   open_Door: 0
 --- !u!114 &761524504
 MonoBehaviour:
@@ -2563,8 +2581,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1153275816}
   - component: {fileID: 1153275817}
-  - component: {fileID: 1153275818}
-  - component: {fileID: 1153275819}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -2608,36 +2624,6 @@ MonoBehaviour:
   luce: {fileID: 236457842}
   ogg: {fileID: 349944812}
   ogg_transf: 0
---- !u!114 &1153275818
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1153275815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dedc0146c701f9e4db91066fdfe2ed8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 182815681}
-  porta: {fileID: 9199680023827539698}
-  image: {fileID: 95290644}
-  open_Door: 0
---- !u!114 &1153275819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1153275815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59d33dc5f59720e48a2ee42b7734398e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  image: {fileID: 95290644}
-  XRrig: {fileID: 182815678}
 --- !u!1 &1222795859
 GameObject:
   m_ObjectHideFlags: 0

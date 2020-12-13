@@ -16,10 +16,6 @@ public class In_Room : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameObject.GetComponent<prova>().open_Door == true)
-        {
-            XRrig.transform.position = new Vector3(0, 0, 0);
-            //Anim_Image.SetTrigger("ActiveInRoom");
-        }
+        
     }
 }
