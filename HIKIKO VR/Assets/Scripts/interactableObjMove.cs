@@ -41,7 +41,11 @@ public class interactableObjMove : MonoBehaviour
             {
                 Destroy(gameObject.GetComponent<XRSimpleInteractable>());
                 //Destroy(gameObject.GetComponent<SkyObjects>());
-                //gameObject.GetComponent<XRGrab>().enabled = true;
+                if (gameObject.name == "Palla")
+                {
+                    gameObject.GetComponent<XRGrab>().enabled = true;
+                }
+                
                 gameObject.GetComponent<interactableObjMove>().enabled = false;
                 gameObject.GetComponent<Rigidbody>().isKinematic = false;
                 

@@ -24,7 +24,7 @@ public class Basket : MonoBehaviour
             Debug.Log(temposcad);
         }
         
-        if (temposcad > 5f)
+        if (temposcad > 30f)
         {
             gameObject.GetComponent<interactableObjMove>().enabled = true;
             //gameObject.GetComponent<SkyObjects>().enabled = true;

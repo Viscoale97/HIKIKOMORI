@@ -44,12 +44,12 @@ public class SkyObjects : MonoBehaviour
     {
        if (interact_object == true)
         {
-            maxvalue = Random.Range(1.5f, 2.2f);
+            maxvalue = Random.Range(2f, 2.5f);
             Debug.Log(gameObject.name + "entrato" + maxvalue);
         }
         else
         {
-            maxvalue = Random.Range(4f, 7f);
+            maxvalue = Random.Range(7f, 13f);
         }
         rb = GetComponent<Rigidbody>();
         rb.useGravity = false;
@@ -62,7 +62,7 @@ public class SkyObjects : MonoBehaviour
         angle_y = 0f;
         angle_z = 0f;
         deltaAlpha = Random.Range(0.0001f, 0.001f);
-        valore_x = Random.Range(1f, 1.5f);
+        valore_x = Random.Range(2f, 2.5f);
         valore_y = Random.Range(1f, 1.5f);
         valore_z = Random.Range(0f, 2f);
         valore_z2 = 2 - valore_z;
@@ -85,11 +85,11 @@ public class SkyObjects : MonoBehaviour
 
 
 
-            if (transform.position.y < maxvalue && trigger == true && move_object == false)
+            if (Mathf.Abs(transform.position.x) < maxvalue && trigger == true && move_object == false && Mathf.Abs(transform.position.y) < maxvalue)
             {
                 Vector3 gravity = globalGravity * gravityScale * Vector3.up;
                 rb.AddForce(gravity, ForceMode.Acceleration);
-                if (transform.position.x > 0)
+                if (transform.position.x >= 0)
                 {
                     rb.AddForce(Vector3.right * valore_x);
                     rb.AddForce(Vector3.forward * valore_x);

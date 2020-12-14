@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -550,7 +550,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &238099944
 Transform:
   m_ObjectHideFlags: 0
@@ -1141,7 +1141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &481388469
 Transform:
   m_ObjectHideFlags: 0
@@ -1266,7 +1266,7 @@ GameObject:
   - component: {fileID: 579431039}
   - component: {fileID: 579431038}
   - component: {fileID: 579431037}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1971,7 +1971,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1073402332
 Transform:
   m_ObjectHideFlags: 0
@@ -2844,7 +2844,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1389635663
 Transform:
   m_ObjectHideFlags: 0
@@ -3879,6 +3879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffa5a3a1171be2042816824eb676f2d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fatto: 0
 --- !u!1 &1642367983
 GameObject:
   m_ObjectHideFlags: 0
