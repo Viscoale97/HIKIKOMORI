@@ -13,6 +13,7 @@ public class interactableObjMove : MonoBehaviour
     void Start()
     {
         gameObject.GetComponent<SkyObjects>().enabled = false;
+        
     }
 
     // Update is called once per frame
@@ -30,7 +31,7 @@ public class interactableObjMove : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, ogg_interact_pos, Time.deltaTime * moveSpeed);
             //move_object = true;
             gameObject.GetComponent<Rigidbody>().useGravity = false;
-
+            fatto = false;
             //Destroy(gameObject.GetComponent<SkyObjects>());
 
         }

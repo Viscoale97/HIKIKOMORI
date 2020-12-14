@@ -93,6 +93,7 @@
     <Compile Include="Assets\Scripts\SkyObjects.cs" />
     <Compile Include="Assets\Scripts\Sound.cs" />
     <Compile Include="Assets\Scripts\SpadaLaser.cs" />
+    <Compile Include="Assets\Scripts\TestBasket.cs" />
     <Compile Include="Assets\Scripts\XRGrab.cs" />
     <Compile Include="Assets\Scripts\XRGrabOffset.cs" />
     <Compile Include="Assets\Scripts\deployAsteroid.cs" />
