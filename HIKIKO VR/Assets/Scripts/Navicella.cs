@@ -46,4 +46,9 @@ public class Navicella : MonoBehaviour
             }
         }
     }
+
+    public void AudioJoystick()
+    {
+        FindObjectOfType<AudioManager>().Play("Joystick");
+    }
 }
