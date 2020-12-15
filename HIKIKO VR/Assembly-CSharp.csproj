@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Basket.cs" />
     <Compile Include="Assets\Scripts\Cadutamuri.cs" />
+    <Compile Include="Assets\Scripts\ComandNavicella.cs" />
     <Compile Include="Assets\Scripts\CountiniousMovement.cs" />
     <Compile Include="Assets\Scripts\Dissolve.cs" />
     <Compile Include="Assets\Scripts\DistanceJoint3D.cs" />

@@ -11,6 +11,7 @@ public class ActiveVoiceOver : MonoBehaviour
     private int activeLight = 0;
     public Light light1;
     public Light light2;
+    public Material bianco;
 
     void Start()
     {
@@ -22,6 +23,9 @@ public class ActiveVoiceOver : MonoBehaviour
     {
         if (activeLight == 1)
         {
+            Color color = bianco.color;
+            color.a -= 1f * Time.deltaTime;
+            bianco.color = color;
             //light1.intensity = Time.deltaTime * 100;
             //light2.intensity = Time.deltaTime * 100;
         }
@@ -42,9 +46,11 @@ public class ActiveVoiceOver : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("Stanza");
     }
 
-    public void ActiveLightInRoom()
+    public void DeActiveLightInRoom()
     {
-        Anim_Image.SetTrigger("ActiveInRoom");
+        activeLight = 1;
+        //Anim_Image.SetTrigger("ActiveInRoom");
         //activeLight = 2;
+        
     }
 }

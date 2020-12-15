@@ -5,9 +5,11 @@ using UnityEngine;
 public class Navicella : MonoBehaviour
 {
     private Rigidbody rb;
-    private Vector3 ogg_interact_pos = new Vector3(0, 1.30f, 1.10f);
-    public bool fatto = false;
+    public Transform ogg_interact_pos;
+    public bool Active_navicella = false;
     private float moveSpeed = 10f;
+    public GameObject joystick;
+    private Vector3 deltaValue;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,25 +28,28 @@ public class Navicella : MonoBehaviour
             rb.constraints = RigidbodyConstraints.FreezePositionZ;
         }*/
 
-        if (transform.position != ogg_interact_pos && fatto == false)
+        if (transform.position != ogg_interact_pos.position && Active_navicella == false)
         {
 
-            transform.position = Vector3.MoveTowards(transform.position, ogg_interact_pos, Time.deltaTime * moveSpeed);
+            transform.position = Vector3.MoveTowards(transform.position, ogg_interact_pos.position, Time.deltaTime * moveSpeed);
             //move_object = true;
             gameObject.GetComponent<Rigidbody>().useGravity = false;
             
             //Destroy(gameObject.GetComponent<SkyObjects>());
 
         }
-        else if (transform.position == ogg_interact_pos)
+        else if (transform.position == ogg_interact_pos.position)
         {
-            if (fatto == false)
+            if (Active_navicella == false)
             {
-                fatto = true;
+
+
+                //Active_navicella = true;
 
                 //tralation = true;
             }
         }
+        
     }
 
     public void AudioJoystick()

@@ -8,6 +8,8 @@ public class Joystick : MonoBehaviour
     public ParticleSystem particle;
     private bool asteroidi;
     public GameObject navicella;
+    public Transform navicellaTarget;
+    public Vector3 pos;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,15 +32,24 @@ public class Joystick : MonoBehaviour
 
         if (gameObject.GetComponent<interactableObjMove>().fatto == true)
         {
-            gameObject.GetComponent<Rigidbody>().AddForce(Vector3.forward);
+            //gameObject.GetComponent<Rigidbody>().AddForce(Vector3.forward);
             particle.Play();
             gameObject.GetComponent<deployAsteroid>().enabled = true;
-            if (gameObject.transform.position.z <= 37f)
+            gameObject.GetComponent<Rotate>().enabled = false;
+           //if (gameObject.transform.position.z <= 37f)
             {
                 navicella.SetActive(true);
 
             }
             
+        }
+
+        if (navicella.GetComponent<Navicella>().Active_navicella == false)
+        {
+            navicellaTarget.transform.position = transform.TransformPoint(pos);
+            //navicellaTarget.transform.position.Set(transform.position.x, transform.position.y + 5f, transform.position.z + 5f);
+            //navicella.transform.position = navicellaTarget.transform.position;
+
         }
 
         
