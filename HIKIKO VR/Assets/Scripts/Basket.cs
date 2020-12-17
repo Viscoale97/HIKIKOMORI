@@ -12,7 +12,7 @@ public class Basket : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.GetComponent<XRGrab>().enabled = false;
+        //gameObject.GetComponent<XRGrab>().enabled = false;
     }
 
     // Update is called once per frame
@@ -26,7 +26,7 @@ public class Basket : MonoBehaviour
         
         if (temposcad > 30f)
         {
-            gameObject.GetComponent<interactableObjMove>().enabled = true;
+            //gameObject.GetComponent<interactableObjMove>().enabled = true;
             //gameObject.GetComponent<SkyObjects>().enabled = true;
             temposcad = 0f;
             lancio = false;

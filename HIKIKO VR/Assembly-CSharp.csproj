@@ -87,6 +87,8 @@
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Prova_avanti.cs" />
     <Compile Include="Assets\Scripts\Rope.cs" />
+    <Compile Include="Assets\Scripts\Rope1.cs" />
+    <Compile Include="Assets\Scripts\Rope2.cs" />
     <Compile Include="Assets\Scripts\RopeRoot.cs" />
     <Compile Include="Assets\Scripts\Rotate.cs" />
     <Compile Include="Assets\Scripts\SelectionManager.cs" />
@@ -95,6 +97,7 @@
     <Compile Include="Assets\Scripts\Sound.cs" />
     <Compile Include="Assets\Scripts\SpadaLaser.cs" />
     <Compile Include="Assets\Scripts\TestBasket.cs" />
+    <Compile Include="Assets\Scripts\TestJoystick.cs" />
     <Compile Include="Assets\Scripts\XRGrab.cs" />
     <Compile Include="Assets\Scripts\XRGrabOffset.cs" />
     <Compile Include="Assets\Scripts\deployAsteroid.cs" />

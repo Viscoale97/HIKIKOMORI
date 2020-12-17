@@ -6,6 +6,8 @@ TagManager:
   tags:
   - muro
   - Rope
+  - Obj Interactable
+  - Inter
   layers:
   - Default
   - TransparentFX

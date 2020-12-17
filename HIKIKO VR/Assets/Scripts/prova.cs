@@ -7,7 +7,7 @@ public class prova : MonoBehaviour
     public Animator anim;
     public GameObject porta;
     public Animator anim_Go;
-    public Material bianco;
+    //public Material bianco;
     //private bool Time_togo;
     private Color color;
     private float Time_togo;
@@ -18,9 +18,9 @@ public class prova : MonoBehaviour
     void Start()
     {
         FindObjectOfType<AudioManager>().Play("Appare_porta");
-        Color color = bianco.color;
-        color.a = 0f;
-        bianco.color = color;
+        //Color color = bianco.color;
+        //color.a = 0f;
+        //bianco.color = color;
 
     }
 
@@ -32,26 +32,10 @@ public class prova : MonoBehaviour
            
             open_Door = true;
 
-            
+            ActiveLightInRoom();
         }
        
-        if (open_Door == true && Time_togo < 5f)
-        {
-            ActiveLightInRoom();
-            
-        }
-
-        if (Time_togo_bool == true)
-        {
-            Time_togo += Time.deltaTime;
-            Debug.Log(Time_togo);
-        }
-
-
-        if (Time_togo >= 5f)
-        {
-            anim_Go.SetTrigger("Go");
-        }
+       
     }
     public void ActiveGo()
     {
@@ -61,10 +45,10 @@ public class prova : MonoBehaviour
     public void ActiveLightInRoom()
     {
        
-         color.a += 1f * Time.deltaTime;
-        bianco.color = color;
-        Time_togo_bool = true;
-        //anim.SetTrigger("ActiveInRoom");
+         //color.a += 1f * Time.deltaTime;
+        //bianco.color = color;
+        //Time_togo_bool = true;
+        anim.SetTrigger("Active");
         //activeLight = 2;
     }
 }

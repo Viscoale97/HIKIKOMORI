@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 ogg_pos;
     public bool ogg_transf = false;
     private bool activeAudio = true;
+    public LayerMask mask;
 
     private void Start()
     {
@@ -86,11 +87,16 @@ public class PlayerMovement : MonoBehaviour
             {
                 tmp.GetComponent<Animator>().SetTrigger("free");
             }
+
+            foreach (GameObject tmp in GameObject.FindGameObjectsWithTag("Inter"))
+            {
+                tmp.GetComponent<XRGrab>().interactionLayerMask = mask;
+            }
             //GameObject.Find("Muro_R").GetComponent<Animator>().SetTrigger("free");
-                //GameObject.Find("Muro_L").GetComponent<Animator>().SetTrigger("free");
-                //GameObject.Find("Muro_B").GetComponent<Animator>().SetTrigger("free");
-                //GameObject.Find("Muro_F").GetComponent<Animator>().SetTrigger("free");
-                //GameObject.Find("Soffitto").GetComponent<Animator>().SetTrigger("free");
+            //GameObject.Find("Muro_L").GetComponent<Animator>().SetTrigger("free");
+            //GameObject.Find("Muro_B").GetComponent<Animator>().SetTrigger("free");
+            //GameObject.Find("Muro_F").GetComponent<Animator>().SetTrigger("free");
+            //GameObject.Find("Soffitto").GetComponent<Animator>().SetTrigger("free");
             Destroy(GameObject.Find("Porta").GetComponent<HingeJoint>());
             Destroy(GameObject.Find("Porta").GetComponent<HingeJointListener>());
             //Destroy(GameObject.Find("Porta").GetComponent<Rigidbody>());

@@ -39,7 +39,7 @@ public class interactableObjMove : MonoBehaviour
         {
             if (fatto == false)
             {
-                Destroy(gameObject.GetComponent<XRSimpleInteractable>());
+                //Destroy(gameObject.GetComponent<XRSimpleInteractable>());
                 //Destroy(gameObject.GetComponent<SkyObjects>());
                 if (gameObject.name == "Palla")
                 {

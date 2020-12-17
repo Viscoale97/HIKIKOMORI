@@ -36,7 +36,8 @@ public class SkyObjects : MonoBehaviour
     private float moveSpeed = 2f;
     private Vector3 ogg_interact_pos = new Vector3(0, 0.7f, 0.4f);
     private bool fatto = false;
-    private bool tralation = false; 
+    private bool tralation = false;
+    public LayerMask mask;
     //public GameObject obj;
 
     // Start is called before the first frame update
@@ -44,8 +45,9 @@ public class SkyObjects : MonoBehaviour
     {
        if (interact_object == true)
         {
-            maxvalue = Random.Range(2f, 2.5f);
+            maxvalue = Random.Range(.5f, .7f);
             Debug.Log(gameObject.name + "entrato" + maxvalue);
+            gameObject.GetComponent<XRGrab>().interactionLayerMask = mask;
         }
         else
         {
@@ -161,7 +163,8 @@ public class SkyObjects : MonoBehaviour
             else if (move_object == true)
             {
                 //MoveToPlayer();
-                
+                gameObject.GetComponent<Rigidbody>().isKinematic = false;
+                gameObject.GetComponent<SkyObjects>().enabled = false;
 
             }
 
@@ -203,9 +206,15 @@ public class SkyObjects : MonoBehaviour
             }
         }*/
         move_object = true;
-        gameObject.GetComponent<interactableObjMove>().enabled = true;
+        //gameObject.GetComponent<interactableObjMove>().enabled = true;
 
     } 
+
+    public void takeBall()
+    {
+        gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
+        gameObject.GetComponent<SkyObjects>().enabled = false;
+    }
 
 
 

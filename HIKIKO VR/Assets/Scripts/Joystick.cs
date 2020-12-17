@@ -54,4 +54,16 @@ public class Joystick : MonoBehaviour
 
         
     }
+
+    public void ActiveNavivella()
+    {
+        particle.Play();
+        gameObject.GetComponent<deployAsteroid>().enabled = true;
+        gameObject.GetComponent<Rotate>().enabled = false;
+        //if (gameObject.transform.position.z <= 37f)
+        {
+            navicella.SetActive(true);
+
+        }
+    }
 }

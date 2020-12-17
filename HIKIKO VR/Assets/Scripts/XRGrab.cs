@@ -5,14 +5,12 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class XRGrab : XRGrabInteractable
 {
+    
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    /*protected override void OnSelectEnter(XRBaseInteractor interactor)
-    {
-        base.onSelectEnter(interactor);
-    }*/
+   
 }

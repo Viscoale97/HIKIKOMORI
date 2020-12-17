@@ -15,8 +15,10 @@ public class TestBasket : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.B))
         {
-            gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 15f);
+            gameObject.transform.position = new Vector3(0f, 1f, 15f);
+            gameObject.GetComponent<Basket>().Gravity();
             gameObject.GetComponent<Basket>().Lancio();
+            gameObject.GetComponent<SkyObjects>().MoveToPlayer();
         }
         
     }
