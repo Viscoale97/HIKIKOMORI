@@ -24,23 +24,23 @@ public class Basket : MonoBehaviour
             Debug.Log(temposcad);
         }
         
-        if (temposcad > 30f)
+        if (temposcad > 5f)
         {
-            //gameObject.GetComponent<interactableObjMove>().enabled = true;
+            gameObject.GetComponent<interactableObjMove>().enabled = true;
             //gameObject.GetComponent<SkyObjects>().enabled = true;
             temposcad = 0f;
             lancio = false;
-            gameObject.GetComponent<TestBasket>().enabled = false;
+            //gameObject.GetComponent<TestBasket>().enabled = false;
             endInteraction = true;
             
         }
 
         if (gameObject.GetComponent<interactableObjMove>().enabled == false && endInteraction == true)
         {
-            endInteraction = false;
-            gameObject.GetComponent<SkyObjects>().enabled = true;
-            gameObject.GetComponent<SkyObjects>().move_object = false;
-            gameObject.GetComponent<SkyObjects>().trigger = true;
+            //endInteraction = false;
+            //gameObject.GetComponent<SkyObjects>().enabled = true;
+            //gameObject.GetComponent<SkyObjects>().move_object = false;
+            //gameObject.GetComponent<SkyObjects>().trigger = true;
             Debug.Log("Palla entrata");
         }
     }
@@ -51,6 +51,6 @@ public class Basket : MonoBehaviour
     public void Lancio()
     {
         lancio = true;
-        gameObject.GetComponent<XRGrab>().enabled = false;
+        //gameObject.GetComponent<XRGrab>().enabled = false;
     }
 }

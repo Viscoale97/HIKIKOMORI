@@ -168,7 +168,7 @@ public class SkyObjects : MonoBehaviour
 
             }
 
-            if (interact_object == true && Input.GetKeyDown("h") && gameObject.name == "Palla")
+            /*if (interact_object == true && Input.GetKeyDown("h") && gameObject.name == "Palla")
             {
                 move_object = true;
                 gameObject.GetComponent<interactableObjMove>().enabled = true;
@@ -177,7 +177,7 @@ public class SkyObjects : MonoBehaviour
             {
                 move_object = true;
                 gameObject.GetComponent<interactableObjMove>().enabled = true;
-            }
+            }*/
         }
 
     }

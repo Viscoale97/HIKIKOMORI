@@ -7,6 +7,7 @@ public class Navicella : MonoBehaviour
     private Rigidbody rb;
     public Transform ogg_interact_pos;
     public bool Active_navicella = false;
+    public bool Active_audio = false;
     private float moveSpeed = 10f;
     public GameObject joystick;
     private Vector3 deltaValue;
@@ -28,7 +29,7 @@ public class Navicella : MonoBehaviour
             rb.constraints = RigidbodyConstraints.FreezePositionZ;
         }*/
 
-        if (transform.position != ogg_interact_pos.position && Active_navicella == false)
+        if (transform.position != ogg_interact_pos.position && Active_navicella == false && joystick.GetComponent<Joystick>().disactive_joystick == false)
         {
 
             transform.position = Vector3.MoveTowards(transform.position, ogg_interact_pos.position, Time.deltaTime * moveSpeed);
@@ -38,22 +39,28 @@ public class Navicella : MonoBehaviour
             //Destroy(gameObject.GetComponent<SkyObjects>());
 
         }
-        else if (transform.position == ogg_interact_pos.position)
+        else if (transform.position == ogg_interact_pos.position && joystick.GetComponent<Joystick>().disactive_joystick == false)
         {
             if (Active_navicella == false)
             {
-
-
+                if (Active_audio == false)
+                {
+                    FindObjectOfType<AudioManager>().Play("Joystick");
+                    Active_audio = true;
+                }
                 //Active_navicella = true;
 
                 //tralation = true;
             }
         }
+        else if (joystick.GetComponent<Joystick>().disactive_joystick == true)
+        {
+            Debug.Log("Navicella entrata");
+            gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            gameObject.GetComponent<Rigidbody>().AddForce(Vector3.forward);
+        }
         
     }
 
-    public void AudioJoystick()
-    {
-        FindObjectOfType<AudioManager>().Play("Joystick");
-    }
+  
 }

@@ -10,16 +10,22 @@ public class Joystick : MonoBehaviour
     public GameObject navicella;
     public Transform navicellaTarget;
     public Vector3 pos;
+    public bool active_Timer;
+    private float Timer = 0f;
+    public bool disactive_joystick = false;
+    private float Emissioner = 0f;
     // Start is called before the first frame update
     void Start()
     {
         particle.Pause();
-        
+        //emission = particle.emission.rateOverTime;
     }
 
     // Update is called once per frame
     void Update()
     {
+        var emission = particle.emission;
+
         if(gameObject.GetComponent<SkyObjects>().trigger == false)
         {
             
@@ -52,6 +58,20 @@ public class Joystick : MonoBehaviour
 
         }
 
+        if (active_Timer == true)
+        {
+            Timer += Time.deltaTime;
+            if (Timer > 30f)
+            {
+                disactive_joystick = true;
+            }
+        }
+
+        if (disactive_joystick == true)
+        {
+            emission.rateOverTime = Emissioner;
+            //gameObject.GetComponent<deployAsteroid>().enabled = false;
+        }
         
     }
 
@@ -60,6 +80,7 @@ public class Joystick : MonoBehaviour
         particle.Play();
         gameObject.GetComponent<deployAsteroid>().enabled = true;
         gameObject.GetComponent<Rotate>().enabled = false;
+        active_Timer = true;
         //if (gameObject.transform.position.z <= 37f)
         {
             navicella.SetActive(true);

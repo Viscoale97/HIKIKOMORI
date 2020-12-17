@@ -7,6 +7,7 @@ public class deployAsteroid : MonoBehaviour
     public GameObject asteroidPrefab;
     public float RespawnTime = 1f;
     public bool active = false;
+    public GameObject joystick;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +21,16 @@ public class deployAsteroid : MonoBehaviour
 
         
     }
+
+    private void Update()
+    {
+        if(joystick.GetComponent<Joystick>().disactive_joystick == true)
+        {
+            StopAllCoroutines();
+        }
+    }
     // Update is called once per frame
-   IEnumerator AsteroidWave()
+    IEnumerator AsteroidWave()
     {
         while (true)
         {

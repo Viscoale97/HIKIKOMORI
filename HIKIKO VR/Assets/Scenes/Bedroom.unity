@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3059,6 +3059,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1153275816}
   - component: {fileID: 1153275817}
+  - component: {fileID: 1153275818}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -3105,6 +3106,20 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &1153275818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153275815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a0c9bcda6fc24841b2ab09b44e58de9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  joystick: {fileID: 0}
+  palla: {fileID: 0}
 --- !u!1 &1181874136
 GameObject:
   m_ObjectHideFlags: 0
@@ -9065,7 +9080,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ogg_interact_pos: {fileID: 1053955472}
   Active_navicella: 0
-  joystick: {fileID: 0}
+  Active_audio: 0
+  joystick: {fileID: 919132149076675468}
 --- !u!65 &1613444888
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20373,6 +20389,8 @@ MonoBehaviour:
   navicella: {fileID: 1613444883}
   navicellaTarget: {fileID: 1053955472}
   pos: {x: 0, y: 0, z: 1}
+  active_Timer: 0
+  disactive_joystick: 0
 --- !u!114 &919132149076675470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20525,6 +20543,7 @@ MonoBehaviour:
     type: 3}
   RespawnTime: 1
   active: 0
+  joystick: {fileID: 919132149076675468}
 --- !u!23 &954084055981107481
 MeshRenderer:
   m_ObjectHideFlags: 0

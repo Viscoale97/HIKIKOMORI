@@ -6,7 +6,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class interactableObjMove : MonoBehaviour
 {
 
-    private float moveSpeed = 2f;
+    private float moveSpeed = 10f;
     public bool fatto = false;
     private Vector3 ogg_interact_pos = new Vector3(0, 1.30f, 1.10f);
     // Start is called before the first frame update
@@ -31,6 +31,7 @@ public class interactableObjMove : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, ogg_interact_pos, Time.deltaTime * moveSpeed);
             //move_object = true;
             gameObject.GetComponent<Rigidbody>().useGravity = false;
+            gameObject.GetComponent<Rigidbody>().isKinematic = true;
             fatto = false;
             //Destroy(gameObject.GetComponent<SkyObjects>());
 
@@ -41,10 +42,7 @@ public class interactableObjMove : MonoBehaviour
             {
                 //Destroy(gameObject.GetComponent<XRSimpleInteractable>());
                 //Destroy(gameObject.GetComponent<SkyObjects>());
-                if (gameObject.name == "Palla")
-                {
-                    gameObject.GetComponent<XRGrab>().enabled = true;
-                }
+               
                 
                 gameObject.GetComponent<interactableObjMove>().enabled = false;
                 gameObject.GetComponent<Rigidbody>().isKinematic = false;
