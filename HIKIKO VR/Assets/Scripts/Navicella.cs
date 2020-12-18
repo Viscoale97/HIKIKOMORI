@@ -11,10 +11,14 @@ public class Navicella : MonoBehaviour
     private float moveSpeed = 10f;
     public GameObject joystick;
     private Vector3 deltaValue;
+    private float z_Start = 0f;
+    public bool disattivo = false;
     // Start is called before the first frame update
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody>();
+        z_Start = transform.position.z;
+        disattivo = false;
     }
 
     // Update is called once per frame
@@ -35,6 +39,7 @@ public class Navicella : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, ogg_interact_pos.position, Time.deltaTime * moveSpeed);
             //move_object = true;
             gameObject.GetComponent<Rigidbody>().useGravity = false;
+            disattivo = false;
             
             //Destroy(gameObject.GetComponent<SkyObjects>());
 
@@ -57,7 +62,20 @@ public class Navicella : MonoBehaviour
         {
             Debug.Log("Navicella entrata");
             gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-            gameObject.GetComponent<Rigidbody>().AddForce(Vector3.forward);
+            gameObject.GetComponent<Rigidbody>().isKinematic = false;
+            if (transform.position.z < z_Start)
+            {
+                gameObject.GetComponent<Rigidbody>().AddForce(Vector3.forward);
+            }
+            else
+            {
+                disattivo = true;
+                rb.isKinematic = true;
+                gameObject.SetActive(false);
+                
+            }
+            
+            
         }
         
     }

@@ -6,12 +6,12 @@ public class deployAsteroid : MonoBehaviour
 {
     public GameObject asteroidPrefab;
     public float RespawnTime = 1f;
-    public bool active = false;
+    public bool active = true;
     public GameObject joystick;
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(AsteroidWave());
+        
         //RespawnTime = 1f;
     }
     private void spawnEnemy()
@@ -24,9 +24,20 @@ public class deployAsteroid : MonoBehaviour
 
     private void Update()
     {
-        if(joystick.GetComponent<Joystick>().disactive_joystick == true)
+        if (joystick.GetComponent<Joystick>().disactive_joystick == false && joystick.GetComponent<Joystick>().active_Timer == true)
+        {
+            if (active)
+            {
+                StartCoroutine(AsteroidWave());
+                active = false;
+            }
+            
+          
+        }
+        else if(joystick.GetComponent<Joystick>().disactive_joystick == true)
         {
             StopAllCoroutines();
+            active = true;
         }
     }
     // Update is called once per frame

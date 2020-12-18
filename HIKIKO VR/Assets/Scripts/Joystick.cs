@@ -14,6 +14,8 @@ public class Joystick : MonoBehaviour
     private float Timer = 0f;
     public bool disactive_joystick = false;
     private float Emissioner = 0f;
+    public enum ElementState { Start, Medio, End }
+    public ElementState currentState = ElementState.Start;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +30,9 @@ public class Joystick : MonoBehaviour
 
         if(gameObject.GetComponent<SkyObjects>().trigger == false)
         {
-            
+            currentState = ElementState.Start;
+
+
             if (gameObject.transform.localScale.x <= 2f)
             {
                 gameObject.transform.localScale += new Vector3(1f, 1f, 1f) * Time.deltaTime * speed;
@@ -45,8 +49,9 @@ public class Joystick : MonoBehaviour
            //if (gameObject.transform.position.z <= 37f)
             {
                 navicella.SetActive(true);
-
+                
             }
+            
             
         }
 
@@ -61,16 +66,34 @@ public class Joystick : MonoBehaviour
         if (active_Timer == true)
         {
             Timer += Time.deltaTime;
+            emission.rateOverTime = Emissioner + 138f;
             if (Timer > 30f)
             {
                 disactive_joystick = true;
+                active_Timer = false;
+                Timer = 0f;
             }
         }
 
-        if (disactive_joystick == true)
+        if (disactive_joystick == true && currentState == ElementState.Medio)
         {
+            
             emission.rateOverTime = Emissioner;
+            currentState = ElementState.End;
             //gameObject.GetComponent<deployAsteroid>().enabled = false;
+        }
+
+        if (navicella.GetComponent<Navicella>().disattivo == true)
+        {
+            gameObject.GetComponent<SkyObjects>().enabled = true;
+            gameObject.GetComponent<SkyObjects>().move_object = false;
+            gameObject.GetComponent<SkyObjects>().trigger = true;
+            //currentState = ElementState.Start;
+            disactive_joystick = false;
+        }
+        else if (navicella.GetComponent<Navicella>().disattivo == false)
+        {
+            gameObject.GetComponent<SkyObjects>().enabled = false;
         }
         
     }
@@ -78,9 +101,12 @@ public class Joystick : MonoBehaviour
     public void ActiveNavivella()
     {
         particle.Play();
+        currentState = ElementState.Medio;
         gameObject.GetComponent<deployAsteroid>().enabled = true;
         gameObject.GetComponent<Rotate>().enabled = false;
         active_Timer = true;
+        
+        
         //if (gameObject.transform.position.z <= 37f)
         {
             navicella.SetActive(true);

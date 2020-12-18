@@ -20,7 +20,7 @@ public class Dissolve : MonoBehaviour
     {
         if (ogg.GetComponent<SkyObjects>().move_object == true)
         {
-            if (currentDissolveValue < 1)
+            if (currentDissolveValue <= 1)
             {
                 currentDissolveValue += Time.deltaTime * (1 / 2f);
             }
@@ -28,7 +28,11 @@ public class Dissolve : MonoBehaviour
         }
         else if (ogg.GetComponent<SkyObjects>().move_object == false)
         {
-            currentDissolveValue = 0f;
+            
+            if (currentDissolveValue >= 0)
+            {
+                currentDissolveValue -= Time.deltaTime * (1 / 2f);
+            }
         }
         
         
