@@ -8,6 +8,7 @@ ScriptsOnlyBuild:
     - Cadutamuri
     - Dissolve
     - Hand
+    - InteractableObject
     - Joystick
     - MouseLook
     - Navicella
@@ -281,31 +282,33 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 15348}
     - Class: 114
-      Script: {instanceID: 15570}
+      Script: {instanceID: 15450}
     - Class: 114
-      Script: {instanceID: 15620}
+      Script: {instanceID: 15572}
     - Class: 114
-      Script: {instanceID: 15728}
+      Script: {instanceID: 15622}
     - Class: 114
-      Script: {instanceID: 15738}
+      Script: {instanceID: 15730}
     - Class: 114
-      Script: {instanceID: 15760}
+      Script: {instanceID: 15740}
     - Class: 114
-      Script: {instanceID: 15868}
+      Script: {instanceID: 15762}
     - Class: 114
-      Script: {instanceID: 15872}
+      Script: {instanceID: 15870}
     - Class: 114
-      Script: {instanceID: 15880}
+      Script: {instanceID: 15874}
     - Class: 114
-      Script: {instanceID: 15906}
+      Script: {instanceID: 15882}
     - Class: 114
-      Script: {instanceID: 15938}
+      Script: {instanceID: 15908}
     - Class: 114
       Script: {instanceID: 15940}
     - Class: 114
-      Script: {instanceID: 16080}
+      Script: {instanceID: 15942}
     - Class: 114
-      Script: {instanceID: 16086}
+      Script: {instanceID: 16082}
+    - Class: 114
+      Script: {instanceID: 16088}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -473,7 +476,7 @@ ScriptsOnlyBuild:
     className: Renderer2DData
   - hash:
       serializedVersion: 2
-      Hash: 464eaa644b8c45cd9582d7be9f5a5b6e
+      Hash: 967eca963f231bb15ad3644cc31d203a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Navicella
@@ -977,7 +980,7 @@ ScriptsOnlyBuild:
     className: TeleportationAnchor
   - hash:
       serializedVersion: 2
-      Hash: bf563bfd4c6fc2166350558c10dd1863
+      Hash: 15a129ae41d936e62d66fc898b4c0709
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Joystick
@@ -1523,6 +1526,12 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
+      Hash: 95f81a4c244ad1ab32afa92f1f2dcfb2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InteractableObject
+  - hash:
+      serializedVersion: 2
       Hash: cd0ecdca0166232906c6f2df9dddc3d3
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem.Editor
@@ -1685,7 +1694,7 @@ ScriptsOnlyBuild:
     className: StandaloneInputModule
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 4a46f9e0dbdb32b6ed6659401c6c00b4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Basket
@@ -1776,4 +1785,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/Bedroom.unity
-  playerPath: C:/Users/Utente/Desktop/VR PROGETTO HIKIKOMORI/Build/HIKIKO scena 30.apk
+  playerPath: C:/Users/Utente/Desktop/VR PROGETTO HIKIKOMORI/Build/HIKIKO scena 31.apk

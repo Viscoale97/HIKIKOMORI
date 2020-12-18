@@ -16,6 +16,8 @@ public class Joystick : MonoBehaviour
     private float Emissioner = 0f;
     public enum ElementState { Start, Medio, End }
     public ElementState currentState = ElementState.Start;
+    public LayerMask mask_not;
+    public LayerMask mask_eve;
     // Start is called before the first frame update
     void Start()
     {
@@ -80,21 +82,32 @@ public class Joystick : MonoBehaviour
             
             emission.rateOverTime = Emissioner;
             currentState = ElementState.End;
+            gameObject.GetComponent<XRGrab>().interactionLayerMask = mask_not;
             //gameObject.GetComponent<deployAsteroid>().enabled = false;
         }
 
-        if (navicella.GetComponent<Navicella>().disattivo == true)
+        if (navicella.GetComponent<Navicella>().disattivo == true || currentState == ElementState.Start)
         {
             gameObject.GetComponent<SkyObjects>().enabled = true;
             gameObject.GetComponent<SkyObjects>().move_object = false;
             gameObject.GetComponent<SkyObjects>().trigger = true;
             //currentState = ElementState.Start;
             disactive_joystick = false;
+            gameObject.GetComponent<XRGrab>().interactionLayerMask = mask_eve;
         }
         else if (navicella.GetComponent<Navicella>().disattivo == false)
         {
             gameObject.GetComponent<SkyObjects>().enabled = false;
         }
+
+       /* if (currentState == ElementState.End)
+        {
+            //gameObject.GetComponent<XRGrab>().interactionLayerMask = mask_not;
+        }
+        else if (gameObject.GetComponent<SkyObjects>().trigger == false && currentState == ElementState.Start)
+        {
+            
+        }*/
         
     }
 

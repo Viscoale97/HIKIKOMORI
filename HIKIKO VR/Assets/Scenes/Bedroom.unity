@@ -8823,6 +8823,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
+  mask_not:
+    serializedVersion: 2
+    m_Bits: 0
+  mask_eve:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!114 &1557638167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20394,6 +20400,12 @@ MonoBehaviour:
   active_Timer: 0
   disactive_joystick: 0
   currentState: 0
+  mask_not:
+    serializedVersion: 2
+    m_Bits: 0
+  mask_eve:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!114 &919132149076675470
 MonoBehaviour:
   m_ObjectHideFlags: 0

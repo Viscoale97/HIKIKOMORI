@@ -13,6 +13,9 @@ public class Basket : MonoBehaviour
     private float TimerActivity = 0f;
     public enum ElementState { Start, Medio, End}
     public ElementState currentState = ElementState.Start;
+    
+    public LayerMask mask_not;
+    public LayerMask mask_eve;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +46,7 @@ public class Basket : MonoBehaviour
             TimerActivity += Time.deltaTime;
             if (TimerActivity > 30f && gameObject.GetComponent<interactableObjMove>().fatto == true)
             {
+                gameObject.GetComponent<XRGrab>().interactionLayerMask = mask_not;
                 currentState = ElementState.End;
                 TimerActivity = 0f;
             }
@@ -56,6 +60,7 @@ public class Basket : MonoBehaviour
             gameObject.GetComponent<SkyObjects>().move_object = false;
             gameObject.GetComponent<SkyObjects>().trigger = true;
             currentState = ElementState.Start;
+            gameObject.GetComponent<XRGrab>().interactionLayerMask = mask_eve;
             Debug.Log("Palla entrata");
         }
     }

@@ -48,7 +48,7 @@ public class SkyObjects : MonoBehaviour
         {
             maxvalue = Random.Range(.7f, .9f);
             maxvaluey = transform.position.x + Random.Range(-1f, 1f);
-            Debug.Log(gameObject.name + "entrato" + maxvalue);
+            //Debug.Log(gameObject.name + "entrato" + maxvalue);
             gameObject.GetComponent<XRGrab>().interactionLayerMask = mask;
         }
         else
@@ -70,7 +70,7 @@ public class SkyObjects : MonoBehaviour
         valore_y = Random.Range(1f, 1.5f);
         valore_z = Random.Range(0f, 2f);
         valore_z2 = 2 - valore_z;
-        Debug.Log("valori " + valore_x + " " + valore_y);
+        //Debug.Log("valori " + valore_x + " " + valore_y);
         
     }
 
@@ -135,7 +135,7 @@ public class SkyObjects : MonoBehaviour
                 {
                     beta = angle_z * Mathf.Deg2Rad;
                 }
-                Debug.Log(gameObject.name + " angolo y: " + angle_z);
+                //Debug.Log(gameObject.name + " angolo y: " + angle_z);
 
 
 
